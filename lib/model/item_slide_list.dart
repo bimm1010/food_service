@@ -29,7 +29,7 @@ final listSlide = [
           'Free delivery for new customers via Apple Pay and others payment methods.'),
   Slide(
       imageURL: 'assets/images/bg4_image.svg',
-      title: 'Choose your foodWelcome',
+      title: 'Choose your food',
       description:
           'Easily find your type of food craving and you’ll get delivery in wide range.'),
 ];

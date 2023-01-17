@@ -9,25 +9,28 @@ class ButtonStarted extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return ElevatedButton(
-      onPressed: () {},
-      style: ButtonStyle(
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20),
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ButtonStyle(
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
             ),
-          ),
-          elevation: MaterialStateProperty.all(0),
-          backgroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
-          fixedSize: MaterialStateProperty.all(
-            Size(size.width * 0.9, size.height * 0.065),
-          ),
-          textStyle: MaterialStateProperty.all(
-            TextStyle(
-              fontSize: size.height * 0.018,
+            elevation: MaterialStateProperty.all(0),
+            backgroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
+            fixedSize: MaterialStateProperty.all(
+              Size(size.width * 0.9, size.height * 0.065),
             ),
-          )),
-      child: const Text('GET STARTED'),
+            textStyle: MaterialStateProperty.all(
+              TextStyle(
+                fontSize: size.height * 0.018,
+              ),
+            )),
+        child: const Text('GET STARTED'),
+      ),
     );
   }
 }
