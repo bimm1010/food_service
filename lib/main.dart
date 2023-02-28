@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamang_food_service/pages/loginScreen/welcome_login.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '$GettingStartedScreen',
       routes: {
         '$GettingStartedScreen': (_) => GettingStartedScreen(),
+        '$WelcomeLoginScreen': (_) => WelcomeLoginScreen(),
       },
     );
   }

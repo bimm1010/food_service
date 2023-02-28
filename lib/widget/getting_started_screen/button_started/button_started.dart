@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tamang_food_service/theme/theme.dart';
+import '../../../pages/loginScreen/welcome_login.dart';
 
 class ButtonStarted extends StatelessWidget {
   const ButtonStarted({
@@ -12,7 +13,9 @@ class ButtonStarted extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed('$WelcomeLoginScreen');
+        },
         style: ButtonStyle(
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(
