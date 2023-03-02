@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 const kColorPrimaryTheme = Color(0xffEEA734);
+const kColorFacebookBtn = Color(0xff395998);
+const kColorGoogleBtn = Color(0xff4285F4);
+const kColorTextBtn = Color(0xffFFFFFF);
 
 class PrimaryFont {
   static TextStyle thin(double size) {

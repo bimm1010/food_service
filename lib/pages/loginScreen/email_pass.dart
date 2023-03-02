@@ -27,14 +27,18 @@ class EmailPass extends StatelessWidget {
               hintText: 'enter password',
             ),
           ),
-          TextButton(
-            onPressed: () {},
-            style: ButtonStyle(
-              textStyle: MaterialStateProperty.all(
-                PrimaryFont.light(10),
-              ),
+          Padding(
+            padding: const EdgeInsets.only(top: 10, bottom: 10),
+            child: TextButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                  textStyle: MaterialStateProperty.all(
+                    PrimaryFont.light(10),
+                  ),
+                  foregroundColor:
+                      MaterialStateProperty.all(kColorPrimaryTheme)),
+              child: const Text('Forget Password?'),
             ),
-            child: const Text('Forget Password?'),
           ),
           ElevatedButton(
             onPressed: () {},
