@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tamang_food_service/pages/loginScreen/welcome_login.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
+import './pages/loginScreen/welcome_login.dart';
 
 void main() {
   runApp(const MyApp());
