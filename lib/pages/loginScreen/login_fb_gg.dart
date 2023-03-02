@@ -12,11 +12,11 @@ class LoginFbGG extends StatelessWidget {
       child: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.only(bottom: 10),
+            padding: EdgeInsets.only(bottom: 20),
             child: Text('Or'),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 15),
             child: ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
