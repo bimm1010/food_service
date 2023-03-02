@@ -13,13 +13,13 @@ class NewAccount extends StatelessWidget {
         children: [
           const Text(
             'Don’t have account?',
-            style: TextStyle(fontSize: 12),
+            style: TextStyle(fontSize: 10),
           ),
           TextButton(
             onPressed: () {},
             style: ButtonStyle(
               textStyle: MaterialStateProperty.all(
-                PrimaryFont.thin(12),
+                PrimaryFont.thin(10),
               ),
               foregroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
             ),

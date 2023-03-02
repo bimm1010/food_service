@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../theme/theme.dart';
 
 class LoginFbGG extends StatelessWidget {
