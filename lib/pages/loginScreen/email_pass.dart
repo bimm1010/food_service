@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tamang_food_service/pages/loginScreen/forgot_screen.dart';
+import 'package:tamang_food_service/pages/forgetScreen/forgot_screen.dart';
 import '../../theme/theme.dart';
 
 class EmailPass extends StatelessWidget {

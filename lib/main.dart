@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
 import './pages/loginScreen/welcome_login.dart';
-import './pages/loginScreen/forgot_screen.dart';
+import 'pages/forgetScreen/forgot_screen.dart';
 
 void main() {
   runApp(const MyApp());
