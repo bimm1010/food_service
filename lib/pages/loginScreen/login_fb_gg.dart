@@ -23,7 +23,8 @@ class LoginFbGG extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(kColorFacebookBtn),
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
                 elevation: MaterialStateProperty.all(0),
                 fixedSize: MaterialStateProperty.all(

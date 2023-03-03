@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamang_food_service/pages/loginScreen/forgot_screen.dart';
 import '../../theme/theme.dart';
 
 class EmailPass extends StatelessWidget {
@@ -30,13 +31,15 @@ class EmailPass extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 10, bottom: 10),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed('$ForgotScreen');
+              },
               style: ButtonStyle(
-                  textStyle: MaterialStateProperty.all(
-                    PrimaryFont.light(10),
-                  ),
-                  foregroundColor:
-                      MaterialStateProperty.all(kColorPrimaryTheme)),
+                textStyle: MaterialStateProperty.all(
+                  PrimaryFont.light(10),
+                ),
+                foregroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
+              ),
               child: const Text('Forget Password?'),
             ),
           ),
