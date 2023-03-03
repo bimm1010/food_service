@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tamang_food_service/pages/forgetScreen/email_address.dart';
 import 'package:tamang_food_service/pages/forgetScreen/header_goback.dart';
+import 'package:tamang_food_service/pages/forgetScreen/header_content.dart';
 
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({super.key});
@@ -11,6 +13,8 @@ class ForgotScreen extends StatelessWidget {
         child: Column(
           children: const [
             HeaderGoBack(),
+            HeaderContent(),
+            EmailAddress(),
           ],
         ),
       ),

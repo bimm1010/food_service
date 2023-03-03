@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
 import './pages/loginScreen/welcome_login.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '$GettingStartedScreen': (_) => GettingStartedScreen(),
         '$WelcomeLoginScreen': (_) => WelcomeLoginScreen(),
         '$ForgotScreen': (_) => ForgotScreen(),
+        '$GoBackVsTitle': (_) => GoBackVsTitle(),
       },
     );
   }
