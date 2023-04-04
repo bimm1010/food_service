@@ -5,19 +5,31 @@ class GoBackVsTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
-        ),
-        Row(
-          children: const [
-            Text('Forgot Password'),
-            Text(''),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Flexible(
+            flex: 1,
+            fit: FlexFit.loose,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back_ios_new_rounded),
+            ),
+          ),
+          const Flexible(
+            flex: 2,
+            fit: FlexFit.tight,
+            child: Text(
+              'Forgot Password',
+              style: TextStyle(fontWeight: FontWeight.w600),
+              textAlign: TextAlign.justify,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
