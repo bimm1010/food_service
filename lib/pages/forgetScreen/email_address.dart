@@ -1,30 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
-class EmailAddress extends StatelessWidget {
+import '../../state/state_manager.dart';
+
+class EmailAddress extends ConsumerWidget {
   const EmailAddress({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final getEmailText = ref.watch(emailSaveStateProvider);
+    print(getEmailText);
     final size = MediaQuery.of(context).size;
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(
+          padding: EdgeInsets.only(
             top: 10,
             left: 16,
             right: 16,
             bottom: 16,
           ),
-          child: TextFormField(
-            decoration: const InputDecoration(
+          child: TextField(
+            decoration: InputDecoration(
               labelText: 'EMAIL ADDRESS',
               hintText: 'Enter Email Address...',
               hintStyle: TextStyle(
                 color: Colors.black38,
               ),
             ),
+            onSubmitted: (value) {
+              ref.read(emailSaveStateProvider.notifier).emailReset(value);
+            },
           ),
         ),
         ElevatedButton(

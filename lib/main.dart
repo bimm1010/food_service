@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
@@ -6,7 +7,7 @@ import './pages/loginScreen/welcome_login.dart';
 import 'pages/forgetScreen/forgot_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -24,10 +25,10 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       initialRoute: '$GettingStartedScreen',
       routes: {
-        '$GettingStartedScreen': (_) => GettingStartedScreen(),
-        '$WelcomeLoginScreen': (_) => WelcomeLoginScreen(),
-        '$ForgotScreen': (_) => ForgotScreen(),
-        '$GoBackVsTitle': (_) => GoBackVsTitle(),
+        '$GettingStartedScreen': (_) => const GettingStartedScreen(),
+        '$WelcomeLoginScreen': (_) => const WelcomeLoginScreen(),
+        '$ForgotScreen': (_) => const ForgotScreen(),
+        '$GoBackVsTitle': (_) => const GoBackVsTitle(),
       },
     );
   }
