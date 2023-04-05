@@ -13,17 +13,23 @@ class EmailAddress extends ConsumerWidget {
     final getEmailText = ref.watch(emailSaveStateProvider);
     print(getEmailText);
     final size = MediaQuery.of(context).size;
+
+    checkHaveMail() {
+      // print(getEmailText.toString().isEmpty);
+      Navigator.of(context).pushNamed('$GoBackVsTitle');
+    }
+
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             top: 10,
             left: 16,
             right: 16,
             bottom: 16,
           ),
           child: TextField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'EMAIL ADDRESS',
               hintText: 'Enter Email Address...',
               hintStyle: TextStyle(
@@ -37,7 +43,26 @@ class EmailAddress extends ConsumerWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamed('$GoBackVsTitle');
+            getEmailText.toString().isNotEmpty == true
+                ? checkHaveMail()
+                : showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('Warning...'),
+                        content: const Text(
+                            'You don"t input your email. Please enter your email'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text('Cancel'),
+                          )
+                        ],
+                      );
+                    },
+                  );
           },
           style: ButtonStyle(
             elevation: MaterialStateProperty.all(0),

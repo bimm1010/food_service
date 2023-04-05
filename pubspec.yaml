@@ -69,6 +69,7 @@ flutter:
     - assets/images/bg2_image.svg 
     - assets/images/bg3_image.svg 
     - assets/images/bg4_image.svg 
+    - assets/images/Doodles.png
   # https://flutter.dev/assets-and-images/#resolution-aware
 
   # For details regarding adding assets from package dependencies, see
