@@ -4,6 +4,7 @@ import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
 import './pages/loginScreen/welcome_login.dart';
+import 'pages/createAccScreen/create_acc_screen.dart';
 import 'pages/forgetScreen/forgot_screen.dart';
 
 void main() {
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '$WelcomeLoginScreen': (_) => const WelcomeLoginScreen(),
         '$ForgotScreen': (_) => const ForgotScreen(),
         '$GoBackVsTitle': (_) => const GoBackVsTitle(),
+        '$CreateAccScreen': (_) => const CreateAccScreen(),
       },
     );
   }

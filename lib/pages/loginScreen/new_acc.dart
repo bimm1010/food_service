@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../theme/theme.dart';
+import '../createAccScreen/create_acc_screen.dart';
 
 class NewAccount extends StatelessWidget {
   const NewAccount({super.key});
@@ -16,7 +17,9 @@ class NewAccount extends StatelessWidget {
             style: TextStyle(fontSize: 10),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed('$CreateAccScreen');
+            },
             style: ButtonStyle(
               textStyle: MaterialStateProperty.all(
                 PrimaryFont.thin(10),
