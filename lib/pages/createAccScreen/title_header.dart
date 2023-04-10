@@ -18,7 +18,7 @@ class TitleHeaderCreateAccScreen extends StatelessWidget {
               fontSize: 34,
               fontWeight: FontWeight.w300,
               color: Colors.black,
-              height: 1.8,
+              height: 1.6,
             ),
             children: [
               TextSpan(

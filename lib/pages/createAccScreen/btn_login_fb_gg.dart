@@ -9,7 +9,7 @@ class BtnFbGg extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(top: 35, left: 16, right: 16),
+      padding: const EdgeInsets.only(top: 30, left: 16, right: 16),
       child: Column(
         children: [
           const Padding(

@@ -63,7 +63,7 @@ class FormCreateAcc extends ConsumerWidget {
             autocorrect: false,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 30, bottom: 30),
+            padding: const EdgeInsets.only(top: 30, bottom: 20),
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
@@ -91,7 +91,8 @@ class FormCreateAcc extends ConsumerWidget {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,
-                      fontWeight: FontWeight.w400),
+                      fontWeight: FontWeight.w400,
+                      height: 1.8),
                   text:
                       'By Signing up you agree to our Terms\nConditions & Privacy Policy.'),
               textAlign: TextAlign.center,
