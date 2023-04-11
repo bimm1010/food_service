@@ -11,7 +11,6 @@ class EmailAddress extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final getEmailText = ref.watch(emailSaveStateProvider);
-    print(getEmailText);
     final size = MediaQuery.of(context).size;
 
     checkHaveMail() {

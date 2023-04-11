@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tamang_food_service/pages/createAccScreen/login_number_phone.dart';
+import 'package:tamang_food_service/pages/createAccScreen/verify_phone_number.dart';
 import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
@@ -31,6 +33,8 @@ class MyApp extends StatelessWidget {
         '$ForgotScreen': (_) => const ForgotScreen(),
         '$GoBackVsTitle': (_) => const GoBackVsTitle(),
         '$CreateAccScreen': (_) => const CreateAccScreen(),
+        '$LoginNumberPhone': (_) => const LoginNumberPhone(),
+        '$VerifyNumberPhone': (_) => const VerifyNumberPhone(),
       },
     );
   }

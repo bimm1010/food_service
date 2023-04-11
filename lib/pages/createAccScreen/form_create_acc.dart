@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tamang_food_service/pages/createAccScreen/login_number_phone.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
+import '../../model/user.dart';
 import '../../state/state_manager.dart';
 
 class FormCreateAcc extends ConsumerWidget {
@@ -11,12 +13,30 @@ class FormCreateAcc extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
     final showOffPass = ref.watch(showOffPassStateProvider);
+    final dataUser = ref.watch(dataSaveFullNameStateProvider);
+    final mail = ref.watch(dataSaveMailStateProvider);
+    final pass = ref.watch(dataSavePassStateProvider);
+
+    checkUser() {
+      if (dataUser.toString().isNotEmpty &&
+          mail.toString().isNotEmpty &&
+          pass.toString().isNotEmpty) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.only(
+        top: 20,
+        left: 18,
+        right: 18,
+      ),
       child: Column(
         children: [
-          const TextField(
-            decoration: InputDecoration(
+          TextField(
+            decoration: const InputDecoration(
               hintText: 'Enter Your Full Name...',
               labelStyle: TextStyle(color: kColorTextField),
               fillColor: kColorPrimaryTheme,
@@ -25,11 +45,14 @@ class FormCreateAcc extends ConsumerWidget {
               ),
               label: Text('Full Name'),
             ),
+            onSubmitted: (value) => ref
+                .read(dataSaveFullNameStateProvider.notifier)
+                .getFullName(value),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 25),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 25),
             child: TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Enter Your Email...',
                 label: Text('Email Address'),
                 labelStyle: TextStyle(color: kColorTextField),
@@ -37,6 +60,9 @@ class FormCreateAcc extends ConsumerWidget {
                   borderSide: BorderSide(color: kColorPrimaryTheme, width: 2.0),
                 ),
               ),
+              onSubmitted: (value) => ref
+                  .read(dataSaveMailStateProvider.notifier)
+                  .getFullMail(value),
             ),
           ),
           TextField(
@@ -61,6 +87,8 @@ class FormCreateAcc extends ConsumerWidget {
             obscureText: showOffPass.value,
             enableSuggestions: false,
             autocorrect: false,
+            onSubmitted: (value) =>
+                ref.read(dataSavePassStateProvider.notifier).getFullPass(value),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 30, bottom: 20),
@@ -80,7 +108,27 @@ class FormCreateAcc extends ConsumerWidget {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                checkUser() == true
+                    ? Navigator.of(context).pushNamed('$LoginNumberPhone')
+                    : showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text('Warning...'),
+                            content: const Text('check your info again...'),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: const Text('Cancel'),
+                              )
+                            ],
+                          );
+                        },
+                      );
+              },
               child: const Text('SIGN UP'),
             ),
           ),
