@@ -45,7 +45,7 @@ class FormCreateAcc extends ConsumerWidget {
               ),
               label: Text('Full Name'),
             ),
-            onSubmitted: (value) => ref
+            onChanged: (value) => ref
                 .read(dataSaveFullNameStateProvider.notifier)
                 .getFullName(value),
           ),
@@ -60,7 +60,7 @@ class FormCreateAcc extends ConsumerWidget {
                   borderSide: BorderSide(color: kColorPrimaryTheme, width: 2.0),
                 ),
               ),
-              onSubmitted: (value) => ref
+              onChanged: (value) => ref
                   .read(dataSaveMailStateProvider.notifier)
                   .getFullMail(value),
             ),
@@ -87,7 +87,7 @@ class FormCreateAcc extends ConsumerWidget {
             obscureText: showOffPass.value,
             enableSuggestions: false,
             autocorrect: false,
-            onSubmitted: (value) =>
+            onChanged: (value) =>
                 ref.read(dataSavePassStateProvider.notifier).getFullPass(value),
           ),
           Padding(
