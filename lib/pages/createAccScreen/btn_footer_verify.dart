@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tamang_food_service/pages/createAccScreen/find_location.dart';
 import 'package:tamang_food_service/state/state_manager.dart';
 import 'package:tamang_food_service/theme/theme.dart';
+
+import '../mainPage/home_screen.dart';
 
 class BtnFooterVerify extends StatelessWidget {
   const BtnFooterVerify({super.key});
@@ -18,7 +19,7 @@ class BtnFooterVerify extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 lists.toString().length == 12
-                    ? Navigator.of(context).pushNamed('$FindLocationRestaurant')
+                    ? Navigator.of(context).pushNamed('$HomeMainScreen')
                     : showDialog(
                         context: context,
                         builder: (context) {

@@ -20,22 +20,18 @@ class OptVerifyInput extends ConsumerWidget {
 
     addNumber1(int num) {
       numberVerify1 = num;
-      print(numberVerify1);
     }
 
     addNumber2(int num) {
       numberVerify2 = num;
-      print(numberVerify2);
     }
 
     addNumber3(int num) {
       numberVerify3 = num;
-      print(numberVerify3);
     }
 
     addNumber4(int num) {
       numberVerify4 = num;
-      print(numberVerify4);
     }
 
     addList() {
