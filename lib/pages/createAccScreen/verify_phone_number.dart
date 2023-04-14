@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tamang_food_service/pages/createAccScreen/btn_footer_verify.dart';
+import 'package:tamang_food_service/pages/createAccScreen/opt_verify_input.dart';
 import 'package:tamang_food_service/state/state_manager.dart';
 
 class VerifyNumberPhone extends StatelessWidget {
@@ -61,6 +63,8 @@ class VerifyNumberPhone extends StatelessWidget {
                   ),
                 ),
               ),
+              const OptVerifyInput(),
+              const BtnFooterVerify(),
             ],
           );
         },

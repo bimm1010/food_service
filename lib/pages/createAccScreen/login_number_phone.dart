@@ -23,7 +23,10 @@ class LoginNumberPhone extends StatelessWidget {
         ),
         title: const Text(
           'Login to Tamang Food\nServices',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w600,
+          ),
           textAlign: TextAlign.center,
         ),
         centerTitle: true,
@@ -104,6 +107,7 @@ class LoginNumberPhone extends StatelessWidget {
                         ),
                         keyboardType: TextInputType.number,
                         inputFormatters: [
+                          LengthLimitingTextInputFormatter(10),
                           FilteringTextInputFormatter.digitsOnly
                         ],
                         onChanged: (value) => ref

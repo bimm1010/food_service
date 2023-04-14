@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tamang_food_service/model/user.dart';
 
-class getEmail extends StateNotifier<String> {
-  getEmail() : super('');
+class GetEmail extends StateNotifier<String> {
+  GetEmail() : super('');
 
   void emailReset(e) {
     state = e;
   }
 }
 
-class showPass extends ChangeNotifier {
+class ShowPass extends ChangeNotifier {
   bool _value = true;
   bool get value => _value;
 
@@ -20,34 +20,42 @@ class showPass extends ChangeNotifier {
   }
 }
 
-class getDataFullName extends StateNotifier {
-  getDataFullName() : super('');
+class GetDataFullName extends StateNotifier {
+  GetDataFullName() : super('');
 
   void getFullName(e) {
     state = e;
   }
 }
 
-class getDataEmail extends StateNotifier {
-  getDataEmail() : super('');
+class GetDataEmail extends StateNotifier {
+  GetDataEmail() : super('');
 
   void getFullMail(e) {
     state = e;
   }
 }
 
-class getDataPassWord extends StateNotifier {
-  getDataPassWord() : super('');
+class GetDataPassWord extends StateNotifier {
+  GetDataPassWord() : super('');
 
   void getFullPass(e) {
     state = e;
   }
 }
 
-class getPhoneNumber extends StateNotifier<String> {
-  getPhoneNumber() : super('');
+class GetPhoneNumber extends StateNotifier<String> {
+  GetPhoneNumber() : super('');
 
   void getUserNumber(number) {
     state = number;
+  }
+}
+
+class GetVerifyNumber extends StateNotifier<List<int>> {
+  GetVerifyNumber() : super([]);
+
+  void addVerify(list) {
+    state = list;
   }
 }

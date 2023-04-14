@@ -2,18 +2,20 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'action.dart';
 
-final emailSaveStateProvider = StateNotifierProvider((ref) => getEmail());
+final emailSaveStateProvider = StateNotifierProvider((ref) => GetEmail());
 
-final showOffPassStateProvider = ChangeNotifierProvider((ref) => showPass());
+final showOffPassStateProvider = ChangeNotifierProvider((ref) => ShowPass());
 
 final dataSaveFullNameStateProvider =
-    StateNotifierProvider((ref) => getDataFullName());
+    StateNotifierProvider((ref) => GetDataFullName());
 
 final dataSaveMailStateProvider =
-    StateNotifierProvider((ref) => getDataEmail());
+    StateNotifierProvider((ref) => GetDataEmail());
 
 final dataSavePassStateProvider =
-    StateNotifierProvider((ref) => getDataPassWord());
+    StateNotifierProvider((ref) => GetDataPassWord());
 
 final dataSavePhoneNumberStateProvider =
-    StateNotifierProvider((ref) => getPhoneNumber());
+    StateNotifierProvider((ref) => GetPhoneNumber());
+
+final dataSaveVerifyNumber = StateNotifierProvider((ref) => GetVerifyNumber());

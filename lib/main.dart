@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tamang_food_service/pages/createAccScreen/find_location.dart';
 import 'package:tamang_food_service/pages/createAccScreen/login_number_phone.dart';
 import 'package:tamang_food_service/pages/createAccScreen/verify_phone_number.dart';
 import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '$CreateAccScreen': (_) => const CreateAccScreen(),
         '$LoginNumberPhone': (_) => const LoginNumberPhone(),
         '$VerifyNumberPhone': (_) => const VerifyNumberPhone(),
+        '$FindLocationRestaurant': (context) => const FindLocationRestaurant(),
       },
     );
   }
