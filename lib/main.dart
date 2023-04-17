@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor: kColorPrimaryTheme,
+        fontFamily: 'SF Pro Text',
       ),
       debugShowCheckedModeBanner: false,
       useInheritedMediaQuery: true,

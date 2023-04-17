@@ -15,10 +15,10 @@ class FindLocationRestaurant extends StatelessWidget {
           },
           icon: const Icon(
             Icons.search_off_outlined,
-            color: Colors.black,
+            color: kColorDefaultTextAndIcon,
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: kColorTransparent,
         elevation: 0,
       ),
       body: Column(
@@ -27,21 +27,17 @@ class FindLocationRestaurant extends StatelessWidget {
             alignment: Alignment.topCenter,
             child: RichText(
               textAlign: TextAlign.center,
-              text: const TextSpan(
+              text: TextSpan(
                 text: 'Find restaurants near you\n ',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                  height: 1.8,
+                style: PrimaryFont.medium(30).copyWith(
+                  color: kColorDefaultTextAndIcon,
+                  height: 1.6,
                 ),
                 children: [
                   TextSpan(
                     text:
                         'Please enter your location or allow access to\nyour location to find restaurants near you.',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
+                    style: PrimaryFont.light(16).copyWith(
                       height: 1.6,
                     ),
                   ),
@@ -54,7 +50,7 @@ class FindLocationRestaurant extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(kColorBtnLocation),
+                backgroundColor: MaterialStateProperty.all(kColorTransparent),
                 elevation: MaterialStateProperty.all(0),
                 foregroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
                 shape: MaterialStateProperty.all(
