@@ -65,7 +65,7 @@ class HomeMainScreen extends StatelessWidget {
                   onPressed: () {},
                   child: const Text(
                     'Filter',
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: kColorDefaultTextAndIcon),
                   ),
                 ),
               ],
