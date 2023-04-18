@@ -23,12 +23,15 @@ class HomeMainScreen extends StatelessWidget {
               centerTitle: true,
               title: Column(
                 children: [
-                  Text(
-                    'Delivery to'.toUpperCase(),
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(color: kColorPrimaryTheme),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text(
+                      'Delivery to'.toUpperCase(),
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodySmall!
+                          .copyWith(color: kColorPrimaryTheme),
+                    ),
                   ),
                   Align(
                     alignment: Alignment.topCenter,
