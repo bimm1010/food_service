@@ -22,7 +22,7 @@ class SectionTitle extends StatelessWidget {
           style: PrimaryFont.medium(24),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: press,
           child: Text(
             'See all',
             style: PrimaryFont.light(16).copyWith(
