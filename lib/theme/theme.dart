@@ -8,6 +8,8 @@ const kColorTextField = Color(0xff939595);
 const kColorTransparent = Colors.transparent;
 const kColorDefaultTextAndIcon = Colors.black;
 
+const double defaultPadding = 16.0;
+
 class PrimaryFont {
   static TextStyle thin(double size) {
     return TextStyle(

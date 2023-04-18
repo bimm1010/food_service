@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -56,7 +54,6 @@ class OptVerifyInput extends ConsumerWidget {
                     borderSide: BorderSide(
                       color: kColorPrimaryTheme,
                       style: BorderStyle.none,
-                      strokeAlign: StrokeAlign.center,
                     ),
                   ),
                 ),
@@ -86,7 +83,6 @@ class OptVerifyInput extends ConsumerWidget {
                     borderSide: BorderSide(
                       color: kColorPrimaryTheme,
                       style: BorderStyle.none,
-                      strokeAlign: StrokeAlign.center,
                     ),
                   ),
                 ),
@@ -115,7 +111,6 @@ class OptVerifyInput extends ConsumerWidget {
                     borderSide: BorderSide(
                       color: kColorPrimaryTheme,
                       style: BorderStyle.none,
-                      strokeAlign: StrokeAlign.center,
                     ),
                   ),
                 ),
@@ -144,7 +139,6 @@ class OptVerifyInput extends ConsumerWidget {
                     borderSide: BorderSide(
                       color: kColorPrimaryTheme,
                       style: BorderStyle.none,
-                      strokeAlign: StrokeAlign.center,
                     ),
                   ),
                 ),

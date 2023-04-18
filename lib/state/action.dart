@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tamang_food_service/model/user.dart';
 
 class GetEmail extends StateNotifier<String> {
   GetEmail() : super('');
