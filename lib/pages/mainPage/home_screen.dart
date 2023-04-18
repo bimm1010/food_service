@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
 import 'package:tamang_food_service/pages/mainPage/mediumCard/medium_card.dart';
+import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/best_pick.dart';
 import 'package:tamang_food_service/theme/list_data.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
@@ -118,6 +119,12 @@ class HomeMainScreen extends StatelessWidget {
               padding: const EdgeInsets.all(defaultPadding),
               sliver: SliverToBoxAdapter(
                 child: Image.asset('assets/images/Banner.png'),
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: BestPick(
+                title: 'Best Picks Restaurants by team',
+                press: () {},
               ),
             ),
           ],
