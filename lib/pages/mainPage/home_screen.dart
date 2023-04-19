@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
 import 'package:tamang_food_service/pages/mainPage/mediumCard/medium_card.dart';
 import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/best_pick.dart';
+import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/card_best_pick.dart';
 import 'package:tamang_food_service/theme/list_data.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
@@ -121,10 +122,30 @@ class HomeMainScreen extends StatelessWidget {
                 child: Image.asset('assets/images/Banner.png'),
               ),
             ),
+            SliverPadding(
+              padding: const EdgeInsets.all(defaultPadding),
+              sliver: SliverToBoxAdapter(
+                child: BestPick(
+                  title: 'Best Picks\nRestaurants by\nteam',
+                  press: () {},
+                ),
+              ),
+            ),
             SliverToBoxAdapter(
-              child: BestPick(
-                title: 'Best Picks Restaurants by team',
-                press: () {},
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(
+                    demoBestPickCardData.length,
+                    (index) => CardBestPick(
+                      title: demoBestPickCardData[index]['name'],
+                      image: demoBestPickCardData[index]['image'],
+                      rating: demoBestPickCardData[index]['rating'],
+                      deliveryTime: demoBestPickCardData[index]['delivertTime'],
+                      location: demoBestPickCardData[index]['location'],
+                    ),
+                  ),
+                ),
               ),
             ),
           ],

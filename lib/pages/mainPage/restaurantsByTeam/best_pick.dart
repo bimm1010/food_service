@@ -18,7 +18,7 @@ class BestPick extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'Featured\nPartners',
+          title,
           style: PrimaryFont.medium(24),
         ),
         TextButton(
