@@ -1,5 +1,8 @@
 {
     "dart.previewCommitCharacters": false,
     "dart.previewFlutterUiGuides": true,
-    "dart.previewFlutterUiGuidesCustomTracking": true
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "cSpell.words": [
+        "Deshi"
+    ]
 }

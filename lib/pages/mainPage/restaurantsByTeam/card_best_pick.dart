@@ -24,9 +24,7 @@ class CardBestPick extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
       child: InkWell(
-        onTap: () {
-          print(2);
-        },
+        onTap: () {},
         child: SizedBox(
           width: 200,
           child: Column(
@@ -89,7 +87,7 @@ class CardBestPick extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const Text('25min'),
+                      Text('${deliveryTime}min'),
                       const Padding(
                         padding: EdgeInsets.only(left: defaultPadding),
                         child: CircleAvatar(

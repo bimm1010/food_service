@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
+import 'package:tamang_food_service/pages/mainPage/allRestaurants/list_all_restaurants.dart';
+import 'package:tamang_food_service/pages/mainPage/allRestaurants/see_all_restaurants.dart';
 import 'package:tamang_food_service/pages/mainPage/mediumCard/medium_card.dart';
 import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/best_pick.dart';
 import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/card_best_pick.dart';
@@ -147,6 +149,15 @@ class HomeMainScreen extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            SliverToBoxAdapter(
+              child: SeeAllRestaurants(
+                press: () {},
+                title: 'All Restaurants',
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: ListAllRestaurants(),
             ),
           ],
         ),
