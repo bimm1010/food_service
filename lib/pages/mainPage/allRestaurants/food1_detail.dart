@@ -134,6 +134,9 @@ class _Food1Detail extends State<Food1Detail> {
                         onPressed: () {},
                         iconSize: 18,
                         icon: SvgPicture.asset('assets/icons/clock.svg'),
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(kColorTextField)),
                       ),
                       Text('${food1[0]['delivertTime'].toString()} Min'),
                       const Spacer(),
