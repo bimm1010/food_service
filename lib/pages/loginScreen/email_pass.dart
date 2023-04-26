@@ -19,14 +19,30 @@ class EmailPass extends StatelessWidget {
               decoration: const InputDecoration(
                 hintText: 'enter email',
                 labelText: 'EMAIL ADDRESS',
+                labelStyle: TextStyle(color: kColorTextField),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: kColorPrimaryTheme,
+                    width: 2.0,
+                  ),
+                ),
               ),
+              cursorColor: kColorPrimaryTheme,
             ),
           ),
           TextFormField(
             decoration: const InputDecoration(
               labelText: 'PASSWORD',
               hintText: 'enter password',
+              labelStyle: TextStyle(color: kColorTextField),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: kColorPrimaryTheme,
+                  width: 2.0,
+                ),
+              ),
             ),
+            cursorColor: kColorPrimaryTheme,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 10, bottom: 10),
