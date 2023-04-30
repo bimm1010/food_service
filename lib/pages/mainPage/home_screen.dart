@@ -85,9 +85,7 @@ class HomeMainScreen extends StatelessWidget {
               sliver: SliverToBoxAdapter(
                 child: SectionTitle(
                   title: 'Featured Partners',
-                  press: () {
-                    print('see all');
-                  },
+                  press: () {},
                 ),
               ),
             ),

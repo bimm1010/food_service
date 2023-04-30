@@ -12,15 +12,16 @@ class WelcomeLoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Column(
-        children: const [
-          HeaderNavigation(),
-          HeaderContent(),
-          EmailPass(),
-          NewAccount(),
-          LoginFbGG(),
-        ],
-      )),
+        child: Column(
+          children: const [
+            HeaderNavigation(),
+            HeaderContent(),
+            EmailPass(),
+            NewAccount(),
+            LoginFbGG(),
+          ],
+        ),
+      ),
     );
   }
 }

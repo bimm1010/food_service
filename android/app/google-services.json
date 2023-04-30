@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "228937623043",
+    "project_id": "tamang-food",
+    "storage_bucket": "tamang-food.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228937623043:android:dad0c60918de5932659036",
+        "android_client_info": {
+          "package_name": "com.example.tamang_food_service"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228937623043-72l8clqlbkklktvqbbhc7p6l2tn2a3c1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tamang_food_service",
+            "certificate_hash": "d2b4cb780b1295952a116e07374e0408bde3044f"
+          }
+        },
+        {
+          "client_id": "228937623043-obeu4iaqm56qkslqu1cn24hmb98vqfle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjWfPPw8yRBIXW7Ib6coXdZRYDEPZFNlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228937623043-obeu4iaqm56qkslqu1cn24hmb98vqfle.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "228937623043-tpk4if4bo2j78d2eg58jriaqo2s9b1k1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tamangFoodService"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

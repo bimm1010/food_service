@@ -1,9 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:tamang_food_service/pages/forgetScreen/forgot_screen.dart';
 import '../../theme/theme.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import '../../authenaticator/auth.dart';
 
-class EmailPass extends StatelessWidget {
+class EmailPass extends StatefulWidget {
   const EmailPass({super.key});
+
+  @override
+  State<EmailPass> createState() => _EmailPassState();
+}
+
+class _EmailPassState extends State<EmailPass> {
+  bool showPass = true;
+  String? errorMessage = '';
+  final TextEditingController _controllerEmail = TextEditingController();
+  final TextEditingController _controllerPassword = TextEditingController();
+
+  Future<void> signInWithEmailAndPassword() async {
+    try {
+      await Auth().signInWithEmailAndPassWord(
+        email: _controllerEmail.text,
+        password: _controllerPassword.text,
+      );
+    } on FirebaseAuthException catch (e) {
+      setState(() {
+        errorMessage = e.message;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +41,7 @@ class EmailPass extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 15),
             child: TextFormField(
+              controller: _controllerEmail,
               decoration: const InputDecoration(
                 hintText: 'enter email',
                 labelText: 'EMAIL ADDRESS',
@@ -31,18 +57,30 @@ class EmailPass extends StatelessWidget {
             ),
           ),
           TextFormField(
-            decoration: const InputDecoration(
+            controller: _controllerPassword,
+            decoration: InputDecoration(
               labelText: 'PASSWORD',
               hintText: 'enter password',
-              labelStyle: TextStyle(color: kColorTextField),
-              focusedBorder: OutlineInputBorder(
+              labelStyle: const TextStyle(color: kColorTextField),
+              focusedBorder: const OutlineInputBorder(
                 borderSide: BorderSide(
                   color: kColorPrimaryTheme,
                   width: 2.0,
                 ),
               ),
+              suffixIcon: IconButton(
+                onPressed: () {
+                  setState(() {
+                    showPass = !showPass;
+                  });
+                },
+                icon: showPass == true
+                    ? const Icon(Icons.abc)
+                    : const Icon(Icons.remove_red_eye_sharp),
+              ),
             ),
             cursorColor: kColorPrimaryTheme,
+            obscureText: showPass,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 10, bottom: 10),
@@ -60,7 +98,9 @@ class EmailPass extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              signInWithEmailAndPassword();
+            },
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
               shape: MaterialStateProperty.all(
