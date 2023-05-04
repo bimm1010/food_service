@@ -8,6 +8,7 @@ import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
 import './pages/loginScreen/welcome_login.dart';
+import 'authenaticator/widgetTree.dart';
 import 'pages/createAccScreen/create_acc_screen.dart';
 import 'pages/forgetScreen/forgot_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         '$VerifyNumberPhone': (_) => const VerifyNumberPhone(),
         '$FindLocationRestaurant': (context) => const FindLocationRestaurant(),
         '$HomeMainScreen': (context) => const HomeMainScreen(),
+        '$WidgetTree': (context) => const WidgetTree(),
       },
     );
   }

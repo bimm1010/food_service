@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tamang_food_service/theme/theme.dart';
-import '../../../pages/loginScreen/welcome_login.dart';
+import '../../../authenaticator/widgetTree.dart';
 
 class ButtonStarted extends StatelessWidget {
   const ButtonStarted({
@@ -14,7 +14,7 @@ class ButtonStarted extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 20),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.of(context).pushNamed('$WelcomeLoginScreen');
+          Navigator.of(context).pushNamed('$WidgetTree');
         },
         style: ButtonStyle(
             shape: MaterialStateProperty.all(

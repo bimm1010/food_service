@@ -24,11 +24,15 @@ class _EmailPassState extends State<EmailPass> {
         password: _controllerPassword.text,
       );
     } on FirebaseAuthException catch (e) {
-      setState(() {
-        errorMessage = e.message;
-      });
+      setState(
+        () {
+          errorMessage = e.message;
+        },
+      );
     }
   }
+
+
 
   @override
   Widget build(BuildContext context) {
