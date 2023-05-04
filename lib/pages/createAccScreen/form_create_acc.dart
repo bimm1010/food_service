@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tamang_food_service/authenaticator/auth.dart';
 import 'package:tamang_food_service/pages/createAccScreen/login_number_phone.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
@@ -13,17 +15,28 @@ class FormCreateAcc extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
     final showOffPass = ref.watch(showOffPassStateProvider);
-    final dataUser = ref.watch(dataSaveFullNameStateProvider);
+    final fullName = ref.watch(dataSaveFullNameStateProvider);
     final mail = ref.watch(dataSaveMailStateProvider);
     final pass = ref.watch(dataSavePassStateProvider);
 
     checkUser() {
-      if (dataUser.toString().isNotEmpty &&
+      if (fullName.toString().isNotEmpty &&
           mail.toString().isNotEmpty &&
           pass.toString().isNotEmpty) {
         return true;
       } else {
         return false;
+      }
+    }
+
+    Future<void> createUserWithEmailAndPassword() async {
+      try {
+        await Auth().createUserWithEmailAndPassword(
+          email: mail.toString(),
+          password: pass.toString(),
+        );
+      } on FirebaseAuthException catch (e) {
+        print(e.message);
       }
     }
 
@@ -128,6 +141,7 @@ class FormCreateAcc extends ConsumerWidget {
                           );
                         },
                       );
+                createUserWithEmailAndPassword();
               },
               child: const Text('SIGN UP'),
             ),
