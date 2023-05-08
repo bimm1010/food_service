@@ -7,50 +7,55 @@ class ListFeaturedItems extends StatelessWidget {
     required this.image,
     required this.name,
     required this.location,
+    required this.press,
   });
   final String image;
   final String name;
   final String location;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 200,
-      child: Column(
-        children: [
-          AspectRatio(
-            aspectRatio: 1.20,
-            child: Image.asset(image),
-          ),
-          Align(
-            alignment: Alignment.topLeft,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: defaultPadding, vertical: defaultPadding),
-              child: Text(
-                name,
-                style: PrimaryFont.light(16),
+    return InkWell(
+      onTap: press,
+      child: SizedBox(
+        width: 200,
+        child: Column(
+          children: [
+            AspectRatio(
+              aspectRatio: 1.20,
+              child: Image.asset(image),
+            ),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: defaultPadding, vertical: defaultPadding),
+                child: Text(
+                  name,
+                  style: PrimaryFont.light(16),
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-            child: Row(
-              children: [
-                const Text('\$\$'),
-                const Padding(
-                  padding: EdgeInsets.only(
-                      left: defaultPadding, right: defaultPadding - 10),
-                  child: CircleAvatar(
-                    backgroundColor: kColorTextField,
-                    radius: 2.0,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+              child: Row(
+                children: [
+                  const Text('\$\$'),
+                  const Padding(
+                    padding: EdgeInsets.only(
+                        left: defaultPadding, right: defaultPadding - 10),
+                    child: CircleAvatar(
+                      backgroundColor: kColorTextField,
+                      radius: 2.0,
+                    ),
                   ),
-                ),
-                Text(location)
-              ],
+                  Text(location)
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

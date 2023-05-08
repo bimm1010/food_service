@@ -45,6 +45,7 @@ class MainRestaurants extends StatelessWidget {
                     image: listFeaturedItems[index]['image'],
                     name: listFeaturedItems[index]['name'],
                     location: listFeaturedItems[index]['location'],
+                    press: () {},
                   ),
                 ),
               ),
