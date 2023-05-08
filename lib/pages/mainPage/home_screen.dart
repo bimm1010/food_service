@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tamang_food_service/pages/featuredPartners/main_featured_partners.dart';
 import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
 import 'package:tamang_food_service/pages/mainPage/allRestaurants/list_all_restaurants.dart';
 import 'package:tamang_food_service/pages/mainPage/allRestaurants/see_all_restaurants.dart';
 import 'package:tamang_food_service/pages/mainPage/mediumCard/medium_card.dart';
 import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/best_pick.dart';
 import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/card_best_pick.dart';
+import 'package:tamang_food_service/pages/restaurants/main_restaurants.dart';
 import 'package:tamang_food_service/theme/list_data.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
@@ -85,7 +87,9 @@ class HomeMainScreen extends StatelessWidget {
               sliver: SliverToBoxAdapter(
                 child: SectionTitle(
                   title: 'Featured Partners',
-                  press: () {},
+                  press: () {
+                    Navigator.of(context).pushNamed('$MainFeaturedPartners');
+                  },
                 ),
               ),
             ),
@@ -105,9 +109,7 @@ class HomeMainScreen extends StatelessWidget {
                           deliveryTime: demoMediumCardData[index]
                               ['delivertTime'],
                           rating: demoMediumCardData[index]['rating'],
-                          press: () {
-                            print('something');
-                          },
+                          press: () {},
                           location: demoMediumCardData[index]['location'],
                         ),
                       ),
@@ -150,11 +152,13 @@ class HomeMainScreen extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child: SeeAllRestaurants(
-                press: () {},
+                press: () {
+                  Navigator.of(context).pushNamed('$MainRestaurants');
+                },
                 title: 'All Restaurants',
               ),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: ListAllRestaurants(),
             ),
           ],

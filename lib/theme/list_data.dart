@@ -144,3 +144,44 @@ List<String> listPicDemoAllRestaurants4 = [
   'assets/images/big_4.png',
   'assets/images/big_3.png',
 ];
+
+List<String> listImageRestaurants = [
+  'assets/images/Header-image.png',
+  'assets/images/medium_1.png',
+  'assets/images/medium_2.png',
+  'assets/images/medium_3.png',
+  'assets/images/medium_4.png',
+];
+
+List<Map<String, dynamic>> listFeaturedItems = [
+  {
+    "name": "Cookie Sandwich",
+    "image": "assets/images/f_0.png",
+    "location": "Chinese",
+  },
+  {
+    "name": "Chow Fun",
+    "image": "assets/images/f_1.png",
+    "location": "Chinese",
+  },
+  {
+    "name": "Dim Sum",
+    "image": "assets/images/f_2.png",
+    "location": "Chinese",
+  },
+  {
+    "name": "Khia Cake",
+    "image": "assets/images/f_3.png",
+    "location": "Chinese",
+  },
+  {
+    "name": "Combo Burger",
+    "image": "assets/images/f_4.png",
+    "location": "Chinese",
+  },
+  {
+    "name": "Combo Sandwich",
+    "image": "assets/images/f_5.png",
+    "location": "Chinese",
+  },
+];

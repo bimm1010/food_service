@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tamang_food_service/pages/featuredPartners/main_featured_partners.dart';
 import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
 import 'package:tamang_food_service/pages/createAccScreen/login_number_phone.dart';
 import 'package:tamang_food_service/pages/createAccScreen/verify_phone_number.dart';
 import 'package:tamang_food_service/pages/mainPage/home_screen.dart';
 import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
+import 'package:tamang_food_service/pages/restaurants/main_restaurants.dart';
 import '/theme/theme.dart';
 import './pages/home_pages.dart';
 import './pages/loginScreen/welcome_login.dart';
@@ -45,6 +47,8 @@ class MyApp extends StatelessWidget {
         '$FindLocationRestaurant': (context) => const FindLocationRestaurant(),
         '$HomeMainScreen': (context) => const HomeMainScreen(),
         '$WidgetTree': (context) => const WidgetTree(),
+        '$MainFeaturedPartners': (context) => const MainFeaturedPartners(),
+        '$MainRestaurants': (context) => const MainRestaurants(),
       },
     );
   }
