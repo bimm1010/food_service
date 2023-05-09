@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tamang_food_service/theme/theme.dart';
 
 class TwoBtnShareSearch extends StatelessWidget {
   const TwoBtnShareSearch({
@@ -10,18 +11,28 @@ class TwoBtnShareSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(
-            'assets/icons/share.svg',
-            color: Colors.white,
+        CircleAvatar(
+          backgroundColor: Colors.white,
+          child: IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              'assets/icons/share.svg',
+              color: kColorDefaultTextAndIcon,
+            ),
           ),
         ),
-        IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(
-            'assets/icons/search.svg',
-            color: Colors.white,
+        Padding(
+          padding: const EdgeInsets.only(
+              left: defaultPadding, right: defaultPadding),
+          child: CircleAvatar(
+            backgroundColor: Colors.white,
+            child: IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(
+                'assets/icons/search.svg',
+                color: kColorDefaultTextAndIcon,
+              ),
+            ),
           ),
         ),
       ],

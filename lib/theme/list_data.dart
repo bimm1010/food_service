@@ -1,3 +1,5 @@
+import '../model/menu.dart';
+
 List<String> demoHeaderImages = [
   'assets/images/big_1.png',
   'assets/images/big_2.png',
@@ -184,4 +186,137 @@ List<Map<String, dynamic>> listFeaturedItems = [
     "image": "assets/images/f_5.png",
     "location": "Chinese",
   },
+];
+
+final List<CategoryMenu> listCategoryMenu = [
+  CategoryMenu(
+    category: 'Most Popular',
+    items: [
+      Menu(
+        title: 'Cookie Sandwich',
+        image: "assets/images/f_0.png",
+        price: 10.0,
+      ),
+      Menu(
+        title: 'Combo Burger',
+        image: "assets/images/f_4.png",
+        price: 10.0,
+      ),
+      Menu(
+        title: 'Combo Sandwich',
+        image: "assets/images/f_5.png",
+        price: 10.0,
+      ),
+    ],
+  ),
+  CategoryMenu(
+    category: 'Beef Lamb',
+    items: [
+      Menu(
+        price: 7.4,
+        image: "assets/images/f_4.png",
+        title: "Combo Burger",
+      ),
+      Menu(
+        price: 9.0,
+        image: "assets/images/f_5.png",
+        title: "Combo Sandwich",
+      ),
+      Menu(
+        price: 8.5,
+        image: "assets/images/f_2.png",
+        title: "Dim SUm",
+      ),
+      Menu(
+        price: 12.4,
+        image: "assets/images/f_3.png",
+        title: "Oyster Dish",
+      ),
+    ],
+  ),
+  CategoryMenu(
+    category: 'Seafood',
+    items: [
+      Menu(
+        price: 7.4,
+        image: "assets/images/f_6.png",
+        title: "Oyster Dish",
+      ),
+      Menu(
+        price: 9.0,
+        image: "assets/images/f_7.png",
+        title: "Oyster On Ice",
+      ),
+      Menu(
+        price: 8.5,
+        image: "assets/images/f_8.png",
+        title: "Fried Rice on Pot",
+      ),
+    ],
+  ),
+  CategoryMenu(
+    category: "Appetizers",
+    items: [
+      Menu(
+        price: 8.5,
+        image: "assets/images/f_2.png",
+        title: "Dim SUm",
+      ),
+      Menu(
+        price: 7.4,
+        image: "assets/images/f_0.png",
+        title: "Cookie Sandwich",
+      ),
+      Menu(
+        price: 9.0,
+        image: "assets/images/f_5.png",
+        title: "Combo Sandwich",
+      ),
+      Menu(
+        price: 12.4,
+        image: "assets/images/f_3.png",
+        title: "Cookie Sandwich",
+      ),
+      Menu(
+        price: 9.0,
+        image: "assets/images/f_1.png",
+        title: "Chow Fun",
+      ),
+    ],
+  ),
+  CategoryMenu(
+    category: "Dim Sum",
+    items: [
+      Menu(
+        price: 9.0,
+        image: "assets/images/f_5.png",
+        title: "Combo Sandwich",
+      ),
+      Menu(
+        price: 12.4,
+        image: "assets/images/f_3.png",
+        title: "Cookie Sandwich",
+      ),
+      Menu(
+        price: 8.5,
+        image: "assets/images/f_2.png",
+        title: "Dim SUm",
+      ),
+      Menu(
+        price: 7.4,
+        image: "assets/images/f_6.png",
+        title: "Oyster Dish",
+      ),
+      Menu(
+        price: 9.0,
+        image: "assets/images/f_7.png",
+        title: "Oyster On Ice",
+      ),
+      Menu(
+        price: 8.5,
+        image: "assets/images/f_8.png",
+        title: "Fried Rice on Pot",
+      ),
+    ],
+  ),
 ];
