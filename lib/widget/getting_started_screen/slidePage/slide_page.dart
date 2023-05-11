@@ -4,7 +4,7 @@ import '../../../model/item_slide_list.dart';
 
 class SlideItem extends StatelessWidget {
   final int index;
-  SlideItem(this.index);
+  const SlideItem(this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class SlideItem extends StatelessWidget {
           child: SvgPicture.asset(
             listSlide[index].imageURL,
             width: 350,
-            height: 350,
+            height: 280,
             fit: BoxFit.scaleDown,
           ),
         ),
