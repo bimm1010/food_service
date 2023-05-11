@@ -3,6 +3,7 @@ import 'package:tamang_food_service/pages/restaurants/category_menu.dart';
 import 'package:tamang_food_service/pages/restaurants/restaurants_info.dart';
 import 'package:tamang_food_service/theme/list_data.dart';
 import 'package:tamang_food_service/theme/theme.dart';
+import '../../model/menu.dart';
 import 'list_featured_items.dart';
 import 'menu_category_item.dart';
 import 'restaurants_app_bar.dart';
@@ -136,13 +137,14 @@ class _MainRestaurantsState extends State<MainRestaurants> {
             delegate: SliverChildBuilderDelegate(
               childCount: listCategoryMenu.length,
               (context, categoryIndex) {
+                List<Menu> items = listCategoryMenu[categoryIndex].items;
                 return MenuCategoryItem(
                   items: List.generate(
                     listCategoryMenu[categoryIndex].items.length,
                     (index) => MenuCard(
-                      title: listCategoryMenu[categoryIndex].items[index].title,
-                      image: listCategoryMenu[categoryIndex].items[index].image,
-                      price: listCategoryMenu[categoryIndex].items[index].price,
+                      title: items[index].title,
+                      image: items[index].image,
+                      price: items[index].price,
                     ),
                   ),
                   title: listCategoryMenu[categoryIndex].category,
