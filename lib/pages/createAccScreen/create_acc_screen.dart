@@ -29,6 +29,7 @@ class CreateAccScreen extends StatelessWidget {
           },
         ),
       ),
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: const [
           TitleHeaderCreateAccScreen(),
