@@ -8,7 +8,7 @@ import 'package:tamang_food_service/pages/mainPage/home_screen.dart';
 import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
 import 'package:tamang_food_service/pages/restaurants/main_restaurants.dart';
 import '/theme/theme.dart';
-import './pages/home_pages.dart';
+import 'pages/slide_page_started/home_pages.dart';
 import './pages/loginScreen/welcome_login.dart';
 import 'authenaticator/widgetTree.dart';
 import 'pages/createAccScreen/create_acc_screen.dart';
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'SF Pro Text',
       ),
       debugShowCheckedModeBanner: false,
+      // ignore: deprecated_member_use
       useInheritedMediaQuery: true,
       initialRoute: '$GettingStartedScreen',
       routes: {

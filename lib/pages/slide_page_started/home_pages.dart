@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:tamang_food_service/model/item_slide_list.dart';
 import 'package:tamang_food_service/widget/getting_started_screen/slidePage/slide_page.dart';
-import '../widget/getting_started_screen/logo_title_started/logo_title_started.dart';
-import '../widget/getting_started_screen/button_started/button_started.dart';
-import '../widget/getting_started_screen/slidePage/slide_dot.dart';
+import '../../widget/getting_started_screen/logo_title_started/logo_title_started.dart';
+import '../../widget/getting_started_screen/button_started/button_started.dart';
+import '../../widget/getting_started_screen/slidePage/slide_dot.dart';
 
 class GettingStartedScreen extends StatefulWidget {
   const GettingStartedScreen({super.key});

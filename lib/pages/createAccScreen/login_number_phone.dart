@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tamang_food_service/pages/createAccScreen/verify_phone_number.dart';
 import 'package:tamang_food_service/theme/theme.dart';
-
 import '../../state/state_manager.dart';
 
 class LoginNumberPhone extends StatelessWidget {
