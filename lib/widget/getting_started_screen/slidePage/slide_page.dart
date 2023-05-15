@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tamang_food_service/theme/theme.dart';
 import '../../../model/item_slide_list.dart';
 
 class SlideItem extends StatelessWidget {
@@ -26,7 +27,7 @@ class SlideItem extends StatelessWidget {
             text: TextSpan(
               text: listSlide[index].title,
               style: const TextStyle(
-                color: Colors.black,
+                color: kColorDefaultTextAndIcon,
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
                 height: 2,

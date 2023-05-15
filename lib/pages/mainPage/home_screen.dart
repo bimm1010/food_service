@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamang_food_service/pages/bottomBarNavigator/bottom_bar_navigator.dart';
 import 'package:tamang_food_service/pages/featuredPartners/main_featured_partners.dart';
 import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
 import 'package:tamang_food_service/pages/mainPage/allRestaurants/list_all_restaurants.dart';
@@ -46,9 +47,9 @@ class HomeMainScreen extends StatelessWidget {
                         Navigator.of(context)
                             .pushNamed('$FindLocationRestaurant');
                       },
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: [
                           Text(
                             'HayStreet, Perth ',
                             style: TextStyle(
@@ -88,7 +89,8 @@ class HomeMainScreen extends StatelessWidget {
                 child: SectionTitle(
                   title: 'Featured Partners',
                   press: () {
-                    Navigator.of(context).pushNamed('$MainFeaturedPartners');
+                    Navigator.of(context)
+                        .pushNamed('$MainFeaturedPartners');
                   },
                 ),
               ),
@@ -102,7 +104,8 @@ class HomeMainScreen extends StatelessWidget {
                     children: List.generate(
                       demoMediumCardData.length,
                       (index) => Padding(
-                        padding: const EdgeInsets.only(right: defaultPadding),
+                        padding:
+                            const EdgeInsets.only(right: defaultPadding),
                         child: MediumCard(
                           title: demoMediumCardData[index]['name'],
                           image: demoMediumCardData[index]['image'],
@@ -143,7 +146,8 @@ class HomeMainScreen extends StatelessWidget {
                       title: demoBestPickCardData[index]['name'],
                       image: demoBestPickCardData[index]['image'],
                       rating: demoBestPickCardData[index]['rating'],
-                      deliveryTime: demoBestPickCardData[index]['delivertTime'],
+                      deliveryTime: demoBestPickCardData[index]
+                          ['delivertTime'],
                       location: demoBestPickCardData[index]['location'],
                     ),
                   ),
