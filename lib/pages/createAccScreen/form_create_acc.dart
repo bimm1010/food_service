@@ -40,11 +40,16 @@ class FormCreateAcc extends ConsumerWidget {
       }
     }
 
+    doIT() {
+      createUserWithEmailAndPassword();
+      Navigator.of(context).pushNamed('$LoginNumberPhone');
+    }
+
     return Padding(
       padding: const EdgeInsets.only(
-        top: 20,
-        left: 18,
-        right: 18,
+        top: defaultPadding,
+        left: defaultPadding,
+        right: defaultPadding,
       ),
       child: Column(
         children: [
@@ -63,7 +68,7 @@ class FormCreateAcc extends ConsumerWidget {
                 .getFullName(value),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 25),
+            padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextField(
               decoration: const InputDecoration(
                 hintText: 'Enter Your Email...',
@@ -104,7 +109,7 @@ class FormCreateAcc extends ConsumerWidget {
                 ref.read(dataSavePassStateProvider.notifier).getFullPass(value),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 30, bottom: 20),
+            padding: const EdgeInsets.only(top: defaultPadding, bottom: defaultPadding),
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
@@ -117,13 +122,13 @@ class FormCreateAcc extends ConsumerWidget {
                 fixedSize: MaterialStateProperty.all(
                   Size(
                     size.width * 0.9,
-                    size.height * 0.065,
+                    size.height * 0.060,
                   ),
                 ),
               ),
               onPressed: () {
                 checkUser() == true
-                    ? Navigator.of(context).pushNamed('$LoginNumberPhone')
+                    ? doIT()
                     : showDialog(
                         context: context,
                         builder: (BuildContext context) {
@@ -141,7 +146,6 @@ class FormCreateAcc extends ConsumerWidget {
                           );
                         },
                       );
-                createUserWithEmailAndPassword();
               },
               child: const Text('SIGN UP'),
             ),
@@ -151,10 +155,11 @@ class FormCreateAcc extends ConsumerWidget {
             child: RichText(
               text: const TextSpan(
                   style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      height: 1.8),
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    height: 1.6,
+                  ),
                   text:
                       'By Signing up you agree to our Terms\nConditions & Privacy Policy.'),
               textAlign: TextAlign.center,

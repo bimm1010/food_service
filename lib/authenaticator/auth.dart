@@ -27,6 +27,12 @@ class Auth {
     );
   }
 
+//   Future<void> updatePassWord({
+//     required String password
+// }) async {
+//     await _firebaseAuth.pas
+//   }
+
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
   }

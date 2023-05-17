@@ -30,8 +30,8 @@ class CreateAccScreen extends StatelessWidget {
         ),
       ),
       resizeToAvoidBottomInset: false,
-      body: Column(
-        children: const [
+      body: const Column(
+        children: [
           TitleHeaderCreateAccScreen(),
           FormCreateAcc(),
           BtnFbGg(),
