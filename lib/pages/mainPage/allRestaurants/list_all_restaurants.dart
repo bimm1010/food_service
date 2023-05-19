@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tamang_food_service/pages/mainPage/allRestaurants/food2_detail.dart';
 import 'package:tamang_food_service/pages/mainPage/allRestaurants/food3_detail.dart';
 import 'package:tamang_food_service/pages/mainPage/allRestaurants/food4_detail.dart';
-import 'package:tamang_food_service/theme/theme.dart';
 
 import 'food1_detail.dart';
 

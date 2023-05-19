@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/list_data.dart';
 import '../../../theme/theme.dart';
 
 class CardBestPick extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SlideDot extends StatelessWidget {
-  bool isActive;
-  SlideDot(this.isActive);
+  final bool isActive;
+  const SlideDot(this.isActive, {super.key});
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tamang_food_service/theme/theme.dart';
 
 class MainFeaturedPartners extends StatelessWidget {
   const MainFeaturedPartners({super.key});

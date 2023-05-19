@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../theme/theme.dart';
 
 class HeaderGoBack extends StatelessWidget {
   const HeaderGoBack({super.key});
@@ -14,10 +13,10 @@ class HeaderGoBack extends StatelessWidget {
           },
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
         ),
-        Expanded(
+        const Expanded(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text(
                 'Forgot Password',
                 style: TextStyle(
