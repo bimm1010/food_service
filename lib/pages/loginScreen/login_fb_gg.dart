@@ -8,7 +8,11 @@ class LoginFbGG extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(top: 10, left: 16, right: 16),
+      padding: const EdgeInsets.only(
+        top: defaultPadding,
+        left: defaultPadding,
+        right: defaultPadding,
+      ),
       child: Column(
         children: [
           const Padding(
@@ -16,7 +20,7 @@ class LoginFbGG extends StatelessWidget {
             child: Text('Or'),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 15),
+            padding: const EdgeInsets.only(bottom: defaultPadding),
             child: ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
@@ -34,13 +38,13 @@ class LoginFbGG extends StatelessWidget {
                   PrimaryFont.medium(size.height * 0.018),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Text('Connect with Facebook'),
                       ],
                     ),
@@ -64,13 +68,13 @@ class LoginFbGG extends StatelessWidget {
                 PrimaryFont.medium(size.height * 0.018),
               ),
             ),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Text('Connect with Google'),
                     ],
                   ),

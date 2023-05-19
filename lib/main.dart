@@ -5,9 +5,11 @@ import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
 import 'package:tamang_food_service/pages/createAccScreen/login_number_phone.dart';
 import 'package:tamang_food_service/pages/createAccScreen/verify_phone_number.dart';
 import 'package:tamang_food_service/pages/mainPage/home_screen.dart';
+import 'package:tamang_food_service/pages/profileScreen/subProfileScreen/sub_profile_info.dart';
 import 'package:tamang_food_service/pages/resetMailSent/header_goback.dart';
 import 'package:tamang_food_service/pages/restaurants/main_restaurants.dart';
 import '/theme/theme.dart';
+import 'pages/bottomBarNavigator/bottom_bar_navigator.dart';
 import 'pages/slide_page_started/home_pages.dart';
 import './pages/loginScreen/welcome_login.dart';
 import 'authenaticator/widgetTree.dart';
@@ -48,8 +50,10 @@ class MyApp extends StatelessWidget {
         '$FindLocationRestaurant': (context) => const FindLocationRestaurant(),
         '$HomeMainScreen': (context) => const HomeMainScreen(),
         '$WidgetTree': (context) => const WidgetTree(),
+        '$BottomBarNavigator': (_) => const BottomBarNavigator(),
         '$MainFeaturedPartners': (context) => const MainFeaturedPartners(),
         '$MainRestaurants': (context) => const MainRestaurants(),
+        '$SubProfileInfo' : (_) => const SubProfileInfo(),
       },
     );
   }

@@ -3,7 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tamang_food_service/state/state_manager.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
-import '../mainPage/home_screen.dart';
+
+import '../bottomBarNavigator/bottom_bar_navigator.dart';
+
 
 class BtnFooterVerify extends StatelessWidget {
   const BtnFooterVerify({super.key});
@@ -19,7 +21,7 @@ class BtnFooterVerify extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 lists.toString().length == 12
-                    ? Navigator.of(context).pushNamed('$HomeMainScreen')
+                    ? Navigator.of(context).pushNamed('$BottomBarNavigator')
                     : showDialog(
                         context: context,
                         builder: (context) {

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tamang_food_service/pages/profileScreen/subProfileScreen/text_field_user_info.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
-class ProfileInfo extends StatelessWidget {
-  const ProfileInfo({Key? key}) : super(key: key);
+class SubProfileInfo extends StatelessWidget {
+  const SubProfileInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -25,6 +27,7 @@ class ProfileInfo extends StatelessWidget {
         backgroundColor: kColorTransparent,
         elevation: 0,
       ),
+      body: const TextFieldUserInfo(),
     );
   }
 }

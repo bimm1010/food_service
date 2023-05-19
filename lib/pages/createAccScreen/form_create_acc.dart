@@ -5,7 +5,6 @@ import 'package:tamang_food_service/authenaticator/auth.dart';
 import 'package:tamang_food_service/pages/createAccScreen/login_number_phone.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
-import '../../model/user.dart';
 import '../../state/state_manager.dart';
 
 class FormCreateAcc extends ConsumerWidget {
@@ -22,7 +21,7 @@ class FormCreateAcc extends ConsumerWidget {
     checkUser() {
       if (fullName.toString().isNotEmpty &&
           mail.toString().isNotEmpty &&
-          pass.toString().isNotEmpty) {
+          pass.toString().isNotEmpty && pass.toString().length >= 6) {
         return true;
       } else {
         return false;
@@ -30,6 +29,7 @@ class FormCreateAcc extends ConsumerWidget {
     }
 
     Future<void> createUserWithEmailAndPassword() async {
+      Navigator.of(context).pushNamed('$LoginNumberPhone');
       try {
         await Auth().createUserWithEmailAndPassword(
           email: mail.toString(),
@@ -38,11 +38,6 @@ class FormCreateAcc extends ConsumerWidget {
       } on FirebaseAuthException catch (e) {
         print(e.message);
       }
-    }
-
-    doIT() {
-      createUserWithEmailAndPassword();
-      Navigator.of(context).pushNamed('$LoginNumberPhone');
     }
 
     return Padding(
@@ -109,7 +104,8 @@ class FormCreateAcc extends ConsumerWidget {
                 ref.read(dataSavePassStateProvider.notifier).getFullPass(value),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: defaultPadding, bottom: defaultPadding),
+            padding: const EdgeInsets.only(
+                top: defaultPadding, bottom: defaultPadding),
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(kColorPrimaryTheme),
@@ -128,7 +124,10 @@ class FormCreateAcc extends ConsumerWidget {
               ),
               onPressed: () {
                 checkUser() == true
-                    ? doIT()
+                    ? [
+                        createUserWithEmailAndPassword(),
+                        Navigator.of(context).pushNamed('$LoginNumberPhone'),
+                      ]
                     : showDialog(
                         context: context,
                         builder: (BuildContext context) {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../theme/theme.dart';
+import 'subProfileScreen/sub_profile_info.dart';
 
 class ListInfoUser extends StatelessWidget {
   const ListInfoUser({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class ListInfoUser extends StatelessWidget {
         "icon": "assets/icons/profile.svg",
         "title": "Profile Information",
         "subtitle": "Change your account information",
+        "navigator" : '$SubProfileInfo'
       },
       {
         "icon": "assets/icons/lock.svg",
@@ -46,7 +48,9 @@ class ListInfoUser extends StatelessWidget {
         children: List.generate(
           listOption.length,
           (index) => InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(listOption[index]['navigator']);
+            },
             child: Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: defaultPadding,

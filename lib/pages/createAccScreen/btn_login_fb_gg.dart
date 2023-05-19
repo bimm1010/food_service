@@ -14,8 +14,8 @@ class BtnFbGg extends StatelessWidget {
         left: defaultPadding,
         right: defaultPadding,
       ),
-      child: FractionallySizedBox(
-        heightFactor: 0.8,
+      child: Align(
+        alignment: Alignment.bottomCenter,
         child: Column(
           children: [
             const Padding(
