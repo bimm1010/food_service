@@ -7,8 +7,9 @@ class NewAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(top: 10),
+      padding: EdgeInsets.only(top: size.height * 0.026),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

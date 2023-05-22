@@ -17,7 +17,10 @@ class CreateAccScreen extends StatelessWidget {
         title: const Text(
           'Create Account',
           style: TextStyle(
-              color: Colors.black, fontSize: 16, fontWeight: FontWeight.w600),
+            color: Colors.black,
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         leading: IconButton(
           icon: const Icon(
@@ -32,9 +35,30 @@ class CreateAccScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: const Column(
         children: [
-          TitleHeaderCreateAccScreen(),
-          FormCreateAcc(),
-          BtnFbGg(),
+          Expanded(
+            flex: 1,
+            child: FractionallySizedBox(
+              alignment: Alignment.topLeft,
+              heightFactor: 1.1,
+              child: TitleHeaderCreateAccScreen(),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: FractionallySizedBox(
+              alignment: Alignment.topLeft,
+              heightFactor: 1.5,
+              child: FormCreateAcc(),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: FractionallySizedBox(
+              heightFactor: 0.8,
+              alignment: Alignment.bottomCenter,
+              child: BtnFbGg(),
+            ),
+          ),
         ],
       ),
     );

@@ -29,7 +29,7 @@ class BtnFbGg extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 15),
+              padding: const EdgeInsets.only(bottom: defaultPadding),
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
@@ -67,7 +67,8 @@ class BtnFbGg extends StatelessWidget {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(kColorGoogleBtn),
                 shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                 ),
                 elevation: MaterialStateProperty.all(0),
                 fixedSize: MaterialStateProperty.all(

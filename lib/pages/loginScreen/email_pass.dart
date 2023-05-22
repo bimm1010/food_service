@@ -85,7 +85,10 @@ class _EmailPassState extends State<EmailPass> {
             obscureText: showPass,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10, bottom: 10),
+            padding: EdgeInsets.only(
+              top: size.height * 0.010,
+              bottom: size.height * 0.010,
+            ),
             child: TextButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('$ForgotScreen');

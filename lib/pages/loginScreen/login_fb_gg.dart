@@ -8,16 +8,16 @@ class LoginFbGG extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(
-        top: defaultPadding,
+      padding: EdgeInsets.only(
+        top: size.height * 0.016,
         left: defaultPadding,
         right: defaultPadding,
       ),
       child: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(bottom: 20),
-            child: Text('Or'),
+          Padding(
+            padding: EdgeInsets.only(bottom: size.height * 0.016),
+            child: const Text('Or'),
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: defaultPadding),
