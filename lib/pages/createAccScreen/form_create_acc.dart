@@ -21,7 +21,8 @@ class FormCreateAcc extends ConsumerWidget {
     checkUser() {
       if (fullName.toString().isNotEmpty &&
           mail.toString().isNotEmpty &&
-          pass.toString().isNotEmpty && pass.toString().length >= 6) {
+          pass.toString().isNotEmpty &&
+          pass.toString().length >= 6) {
         return true;
       } else {
         return false;
@@ -36,7 +37,7 @@ class FormCreateAcc extends ConsumerWidget {
           password: pass.toString(),
         );
       } on FirebaseAuthException catch (e) {
-        print(e.message);
+        e.message;
       }
     }
 
