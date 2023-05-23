@@ -32,6 +32,7 @@ class VerifyNumberPhone extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
+      resizeToAvoidBottomInset: false,
       body: Consumer(
         builder: (context, ref, child) {
           final numberPhone = ref.watch(dataSavePhoneNumberStateProvider);

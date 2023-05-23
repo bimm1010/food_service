@@ -58,7 +58,9 @@ class LoginFbGG extends StatelessWidget {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(kColorGoogleBtn),
               shape: MaterialStateProperty.all(
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
               elevation: MaterialStateProperty.all(0),
               fixedSize: MaterialStateProperty.all(
