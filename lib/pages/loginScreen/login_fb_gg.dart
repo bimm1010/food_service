@@ -20,7 +20,7 @@ class LoginFbGG extends StatelessWidget {
             child: const Text('Or'),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: defaultPadding),
+            padding: EdgeInsets.only(bottom: size.height * 0.026),
             child: ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
