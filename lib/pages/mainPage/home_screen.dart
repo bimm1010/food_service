@@ -3,6 +3,7 @@ import 'package:tamang_food_service/pages/featuredPartners/main_featured_partner
 import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
 import 'package:tamang_food_service/pages/mainPage/allRestaurants/list_all_restaurants.dart';
 import 'package:tamang_food_service/pages/mainPage/allRestaurants/see_all_restaurants.dart';
+import 'package:tamang_food_service/pages/mainPage/filter/filter.dart';
 import 'package:tamang_food_service/pages/mainPage/mediumCard/medium_card.dart';
 import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/best_pick.dart';
 import 'package:tamang_food_service/pages/mainPage/restaurantsByTeam/card_best_pick.dart';
@@ -68,7 +69,9 @@ class HomeMainScreen extends StatelessWidget {
               ),
               actions: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('$FilterMainScreen');
+                  },
                   child: const Text(
                     'Filter',
                     style: TextStyle(color: kColorDefaultTextAndIcon),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../theme/theme.dart';
+import 'subProfileScreen/change_password_screen.dart';
 import 'subProfileScreen/sub_profile_info.dart';
 
 class ListInfoUser extends StatelessWidget {
@@ -20,6 +21,7 @@ class ListInfoUser extends StatelessWidget {
         "icon": "assets/icons/lock.svg",
         "title": "Change Password",
         "subtitle": "Change your password",
+        "navigator" : '$ChangePasswordScreen'
       },
       {
         "icon": "assets/icons/card.svg",

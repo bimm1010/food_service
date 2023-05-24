@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tamang_food_service/theme/theme.dart';
@@ -18,7 +19,7 @@ class ChangePasswordScreen extends StatelessWidget {
           icon: SvgPicture.asset('assets/icons/back.svg'),
         ),
         title: Text(
-          'Profile Settings',
+          '${FirebaseAuth.instance.currentUser!.email}',
           style: PrimaryFont.light(16).copyWith(
             color: kColorDefaultTextAndIcon,
           ),

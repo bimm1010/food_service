@@ -4,6 +4,7 @@ import 'package:tamang_food_service/pages/featuredPartners/main_featured_partner
 import 'package:tamang_food_service/pages/locationScreen/find_location.dart';
 import 'package:tamang_food_service/pages/createAccScreen/login_number_phone.dart';
 import 'package:tamang_food_service/pages/createAccScreen/verify_phone_number.dart';
+import 'package:tamang_food_service/pages/mainPage/filter/filter.dart';
 import 'package:tamang_food_service/pages/mainPage/home_screen.dart';
 import 'package:tamang_food_service/pages/profileScreen/subProfileScreen/change_password_screen.dart';
 import 'package:tamang_food_service/pages/profileScreen/subProfileScreen/sub_profile_info.dart';
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
         '$MainFeaturedPartners': (context) => const MainFeaturedPartners(),
         '$MainRestaurants': (context) => const MainRestaurants(),
         '$SubProfileInfo': (_) => const SubProfileInfo(),
-        '$ChangePasswordScreen': (context) => const ChangePasswordScreen()
+        '$ChangePasswordScreen': (context) => const ChangePasswordScreen(),
+        '$FilterMainScreen' : (context) => const FilterMainScreen(),
       },
     );
   }

@@ -14,7 +14,7 @@ class TextFieldUserInfo extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
     final fullName = ref.watch(dataSaveFullNameStateProvider);
-    final mail = ref.watch(dataSaveMailStateProvider);
+    // final mail = ref.watch(dataSaveMailStateProvider);
     final pass = ref.watch(dataSavePassStateProvider);
     final phoneNumber = ref.watch(dataSavePhoneNumberStateProvider);
 
@@ -34,7 +34,7 @@ class TextFieldUserInfo extends ConsumerWidget {
       {
         "label": "email address",
         "obscureText": false,
-        "value": TextEditingController(text: mail.toString()),
+        "value": TextEditingController(text: FirebaseAuth.instance.currentUser!.email),
         "enable": false,
         "suffix": const Text(''),
         "saveChanged": (value) {},
