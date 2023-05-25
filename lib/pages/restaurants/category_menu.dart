@@ -35,8 +35,11 @@ class RestaurantCategory extends SliverPersistentHeaderDelegate {
 }
 
 class CategoryMenu extends StatefulWidget {
-  const CategoryMenu(
-      {super.key, required this.onChange, required this.getIndex});
+  const CategoryMenu({
+    super.key,
+    required this.onChange,
+    required this.getIndex,
+  });
 
   final ValueChanged<int> onChange;
   final int getIndex;

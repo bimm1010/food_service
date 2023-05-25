@@ -320,3 +320,30 @@ final List<CategoryMenu> listCategoryMenu = [
     ],
   ),
 ];
+
+List<String> listFoodFilter = [
+  "All",
+  "Brunch",
+  "Dinner",
+  "Burgers",
+  "Chinese",
+  "Pizza",
+  "Salads",
+  "Soups",
+  "Breakfast",
+];
+
+List<String> listDietary = [
+  "any",
+  "Vegetarian",
+  "Vegan",
+  "Gluten-Free",
+];
+
+List<String> listPrice = [
+  "\$",
+  "\$\$",
+  "\$\$\$",
+  "\$\$\$\$",
+  "\$\$\$\$\$",
+];

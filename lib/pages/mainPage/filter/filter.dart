@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
+import 'list_filter.dart';
+
 class FilterMainScreen extends StatelessWidget {
   const FilterMainScreen({Key? key}) : super(key: key);
 
@@ -16,8 +18,8 @@ class FilterMainScreen extends StatelessWidget {
           icon: SvgPicture.asset('assets/icons/back.svg'),
         ),
         title: Text(
-          'Filter',
-          style: PrimaryFont.light(16).copyWith(
+          'Filters',
+          style: PrimaryFont.medium(16).copyWith(
             color: kColorDefaultTextAndIcon,
           ),
         ),
@@ -27,14 +29,5 @@ class FilterMainScreen extends StatelessWidget {
       ),
       body: const ListFilter(),
     );
-  }
-}
-
-class ListFilter extends StatelessWidget {
-  const ListFilter({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Text('list filter');
   }
 }
