@@ -347,3 +347,30 @@ List<String> listPrice = [
   "\$\$\$\$",
   "\$\$\$\$\$",
 ];
+
+List<Map<String, dynamic>> listFoodInSearch = [
+  {
+    "name": "The Halal Guys",
+    "image": "assets/images/search_image/1.png",
+  },
+  {
+    "name": "Popeyes 1426 Flmst",
+    "image": "assets/images/search_image/2.png",
+  },
+  {
+    "name": "Mixt - Yerba Buena",
+    "image": "assets/images/search_image/3.png",
+  },
+  {
+    "name": "Split Bread - Russian",
+    "image": "assets/images/search_image/4.png",
+  },
+  {
+    "name": "The Halal",
+    "image": "assets/images/search_image/5.png",
+  },
+  {
+    "name": "Cookie cream",
+    "image": "assets/images/search_image/6.png",
+  },
+];
