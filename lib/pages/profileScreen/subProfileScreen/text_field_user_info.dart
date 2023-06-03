@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tamang_food_service/authenaticator/auth.dart';
 import 'package:tamang_food_service/pages/profileScreen/subProfileScreen/change_password_screen.dart';
 import 'package:tamang_food_service/theme/theme.dart';
 
@@ -34,7 +33,8 @@ class TextFieldUserInfo extends ConsumerWidget {
       {
         "label": "email address",
         "obscureText": false,
-        "value": TextEditingController(text: FirebaseAuth.instance.currentUser!.email),
+        "value": TextEditingController(
+            text: FirebaseAuth.instance.currentUser!.email),
         "enable": false,
         "suffix": const Text(''),
         "saveChanged": (value) {},
